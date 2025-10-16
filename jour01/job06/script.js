@@ -1,6 +1,5 @@
 function fizzbuzz ()
 {
-    let jourssemaines = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
     for (let i=0; i<=151; i++)
         {
                 if (i % 3 === 0 ) {
