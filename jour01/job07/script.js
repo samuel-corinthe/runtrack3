@@ -4,7 +4,7 @@ function jourtravaille(dateStr) {
     const mois = date.getMonth();
     const année = date.getFullYear();
 
-    const format = String(date.getDate()).padStart(2, '0') + '-' +
+    const format = String(jour).padStart(2, '0') + '-' +
                    String(mois + 1).padStart(2, '0') + '-' +
                    String(année);
 
@@ -27,4 +27,4 @@ function jourtravaille(dateStr) {
     console.log(`${dateStr} est un jour travaillé`);
 }
 
-jourtravaille('12-25-2025')
+jourtravaille('25-12-2025')
