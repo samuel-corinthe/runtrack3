@@ -1,12 +1,11 @@
 function jourtravaille(dateStr) {
-    const date = new Date(dateStr);
-    const jour = date.getDay();
-    const mois = date.getMonth();
-    const année = date.getFullYear();
+    const [jour, mois, année] = dateStr.split('-');
+    const date = new Date(`${année}-${mois}-${jour}`);
 
-    const format = String(jour).padStart(2, '0') + '-' +
-                   String(mois + 1).padStart(2, '0') + '-' +
-                   String(année);
+    const jourSemaine = date.getDay();
+    const format = String(date.getDate()).padStart(2, '0') + '-' +
+                   String(date.getMonth() + 1).padStart(2, '0') + '-' +
+                   String(date.getFullYear());
 
     const jourFerier = [
         '25-12-2025', '26-12-2025', '01-01-2026', '13-04-2026',
@@ -19,7 +18,7 @@ function jourtravaille(dateStr) {
         return;
     }
 
-    if (jour === 0 || jour === 6) {
+    if (jourSemaine === 0 || jourSemaine === 6) {
         console.log(`${dateStr} est un weekend`);
         return;
     }
@@ -27,4 +26,4 @@ function jourtravaille(dateStr) {
     console.log(`${dateStr} est un jour travaillé`);
 }
 
-jourtravaille('25-12-2025')
+jourtravaille('25-12-2025');
