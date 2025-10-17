@@ -1,0 +1,15 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    min-height: 4096px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#myfoo {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background: black;
+}
