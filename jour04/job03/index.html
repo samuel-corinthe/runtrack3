@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Filtrer les Pokémon</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Filtrer les Pokémon</h1>
+
+    <form id="filtreForm">
+      <label for="id">ID :</label>
+      <input type="text" id="id" placeholder="ex: 25" />
+
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" placeholder="ex: Pikachu" />
+
+      <label for="type">Type :</label>
+      <select id="type">
+        <option value="">Tous les types</option>
+        <option value="Fire">Feu</option>
+        <option value="Water">Eau</option>
+        <option value="Grass">Plante</option>
+        <option value="Electric">Électrique</option>
+        <option value="Poison">Poison</option>
+        <option value="Flying">Vol</option>
+        <option value="Fighting">Combat</option>
+        <option value="Psychic">Psy</option>
+        <option value="Bug">Insecte</option>
+        <option value="Rock">Roche</option>
+        <option value="Ground">Sol</option>
+        <option value="Ice">Glace</option>
+        <option value="Ghost">Spectre</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Dark">Ténèbres</option>
+        <option value="Steel">Acier</option>
+        <option value="Fairy">Fée</option>
+      </select>
+
+      <button type="button" id="filtrer">Filtrer</button>
+    </form>
+
+    <div id="result"></div>
+  </body>
+</html>
