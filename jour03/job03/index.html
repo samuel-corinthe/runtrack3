@@ -2,17 +2,28 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS</title>
-    <script defer src="script.js"> </script>
+    <title>Jeu du Taquin – La Plateforme_</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
+    <h1>Jeu du Taquin – La Plateforme_</h1>
 
-    </main>
-    <footer>
+    <div id="taquin">
+      <div class="case" data-pos="0"><img src="assets/1.PNG" alt="1" /></div>
+      <div class="case" data-pos="1"><img src="assets/2.PNG" alt="2" /></div>
+      <div class="case" data-pos="2"><img src="assets/3.PNG" alt="3" /></div>
+      <div class="case" data-pos="3"><img src="assets/4.PNG" alt="4" /></div>
+      <div class="case" data-pos="4"><img src="assets/5.PNG" alt="5" /></div>
+      <div class="case" data-pos="5"><img src="assets/6.PNG" alt="6" /></div>
+      <div class="case" data-pos="6"><img src="assets/7.PNG" alt="7" /></div>
+      <div class="case" data-pos="7"><img src="assets/8.PNG" alt="8" /></div>
+      <div class="case vide" data-pos="8"></div>
+    </div>
 
-    </footer>
+    <p id="message"></p>
+    <button id="restart" style="display: none">Recommencer</button>
 
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,48 @@
+    body {
+    width: 100%;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 40px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #rainbow {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin: 20px auto;
+      width: fit-content;
+    }
+
+    #rainbow img {
+      width: 133px;
+      height: 199px;
+      border: 2px solid #ccc;
+      cursor: grab;
+      object-fit: contain; /* empêche la déformation */
+    }
+
+    button {
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    button:hover {
+      background-color: #1976d2;
+    }
+
+    #message {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
