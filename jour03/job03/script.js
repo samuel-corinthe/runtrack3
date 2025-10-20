@@ -45,7 +45,7 @@ $(function() {
   function checkWin() {
     const gagne = $("#taquin .case").toArray().every((el, i) => $(el).data("pos") === i || $(el).hasClass("vide"));
     if (gagne) {
-      $("#message").text("Vous avez gagné 🎉").css("color", "green");
+      $("#message").text("Vous avez gagné").css("color", "green");
       $(".case").removeClass("cliquable").css("pointer-events", "none");
       $("#restart").show();
     }
