@@ -1,7 +1,8 @@
-    .blue-light { background:#9ee7ff; height:110px; }
-    .blue       { background:#6ea8fe; height:130px; }
-    .purple     { background:#b384ff; height:100px; }
-    .purple-lg  { background:#b384ff; height:120px; }
-    .orange     { background:#f3a78b; height:70px; }
-    .rounded    { border-radius:10px !important; }
-    .mb         { margin-bottom:16px; }
+.blue-light { background:#9ee7ff; height:110px; }
+.blue       { background:#6ea8fe; height:130px; }
+.purple     { background:#b384ff; height:100px; }
+.purple-lg  { background:#b384ff; height:120px; }
+.orange     { background:#f3a78b; height:70px; }
+.rounded    { border-radius:10px !important; }
+.mb         { margin-bottom:16px; }
+
