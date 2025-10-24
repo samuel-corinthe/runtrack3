@@ -1,8 +1,30 @@
-.blue-light { background:#9ee7ff; height:110px; }
-.blue       { background:#6ea8fe; height:130px; }
-.purple     { background:#b384ff; height:100px; }
-.purple-lg  { background:#b384ff; height:120px; }
-.orange     { background:#f3a78b; height:70px; }
-.rounded    { border-radius:10px !important; }
-.mb         { margin-bottom:16px; }
+.B-b1 {
+  background-color: #87ceeb;
+}
+.B-b2 {
+  background-color: #6ea6e8;
+}
+.B-b3 {
+  background-color: #b98ee8;
+}
+.B-b4 {
+  background-color: #e8a58d;
+}
+.bloc {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
 
+@media (min-width: 992px) {
+  .h-lg-250 {
+    height: 250px !important;
+  }
+  .h-lg-150 {
+    height: 150px !important;
+  }
+  .h-lg-100 {
+    height: 100px !important;
+  }
+}
