@@ -1,0 +1,13 @@
+:root {
+  --radius: 16px;
+}
+.card {
+  border-radius: var(--radius);
+}
+.btn {
+  border-radius: 12px;
+}
+.table td,
+.table th {
+  vertical-align: middle;
+}
