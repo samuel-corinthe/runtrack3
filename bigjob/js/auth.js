@@ -37,13 +37,11 @@ function validateField(field, form) {
   let valid = true;
   hideFieldError(field);
 
-  // Vide
   if (field.hasAttribute("required") && !field.value.trim()) {
     showFieldError(field, "Ce champ est obligatoire");
     valid = false;
   }
 
-  // Email
   const strictEmailRegex = /^[a-zA-Z0-9._%+-]+@laplateforme\.io$/;
   if (
     field.name === "email" &&
@@ -54,7 +52,6 @@ function validateField(field, form) {
     valid = false;
   }
 
-  // Mot de passe
   if (field.name === "password") {
     const PasswordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.,;:+_#-]).{8,}$/;
@@ -67,7 +64,6 @@ function validateField(field, form) {
     }
   }
 
-  // Confirmation
   if (field.name === "confirm") {
     const pw = form.querySelector('input[name="password"]').value;
     if (pw && field.value !== pw) {
@@ -76,13 +72,11 @@ function validateField(field, form) {
     }
   }
 
-  // Styles visuels
   field.style.borderColor = valid ? "#22c55e" : "#ef4444";
   field.style.backgroundColor = valid ? "#dcfce7" : "#fee2e2";
   return valid;
 }
 
-/* ---- Gestion du formulaire ---- */
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("authForm");
   if (!form) {
@@ -114,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return alert(`Domaine non autorisé: @${domain}`);
     }
 
-    // Création / mise à jour de l'utilisateur
     let user = (data.users || []).find((u) => u.email === email);
     if (!user) {
       const newId = Math.max(0, ...data.users.map((u) => u.id)) + 1;

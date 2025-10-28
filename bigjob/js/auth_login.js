@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const user = (data.users || []).find(
       (u) => u.email === email && u.password === password
     );
+    
 
     if (!user) {
       alert("Email ou mot de passe incorrect");

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const PasswordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.,;:+_#-]).{8,}$/;
 
+    
   function showError(f, msg) {
     const err = f.parentNode.querySelector(".field-error");
     if (err) err.remove();

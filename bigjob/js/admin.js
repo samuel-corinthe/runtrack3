@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tbody.appendChild(tr);
     }
   }
+  
 
   tbody.addEventListener("change", (e) => {
     const sel = e.target.closest("select[data-id]");
