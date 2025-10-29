@@ -4,27 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio — Développeur</title>
-
-  <!-- Police (Manrope, comme tu avais) -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap" rel="stylesheet">
-
-  <!-- CSS principal -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- jQuery (pour le fichier jquery-effects.js) -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-
-  <!-- JS vanilla -->
   <script src="app.js" defer></script>
-  <!-- Effets jQuery -->
-  <script src="jquery-effects.js" defer></script>
-
   <meta name="color-scheme" content="light dark" />
   <meta name="description" content="Portfolio développeur — projets, compétences, expériences, contact." />
 </head>
 <body>
-  <!-- ====== Navigation (mobile-first) ====== -->
+<div id="loader">
+  <div class="loader-spinner"></div>
+  <p>Chargement...</p>
+</div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Retour à l’accueil">
       <span id="log1">_</span>Portfolio
@@ -52,7 +44,6 @@
   </header>
 
   <main id="home">
-    <!-- ====== Hero ====== -->
     <section class="hero reveal">
       <div class="hero-left">
         <h1 class="gradient-title">Développeur <span class="typing" aria-live="polite"></span></h1>
@@ -64,7 +55,7 @@
 
         <div class="contact-chips" role="list">
           <a role="listitem" class="chip" href="mailto:samuel.corinthe@hotmail.fr" aria-label="Envoyer un email">
-            <!-- Icône Mail (SVG), conserve l'id pour tes styles/ta logique) -->
+
 <svg id="mail" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
   <path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 6 9-5H3l9 5zm0 2L3 8v9h18V8l-9 5z" fill="currentColor"/>
 </svg>
@@ -82,14 +73,13 @@
       </div>
 
       <div class="hero-right">
-        <!-- Profil -->
+
         <img id="profil" src="me.png" alt="Photo de profil" />
         <div class="hero-badges">
         </div>
       </div>
     </section>
 
-    <!-- ====== À propos ====== -->
     <section id="about" class="presentation reveal">
       <h2>Présentation</h2>
       <p>Développeur full-stack orienté produit. J’aime transformer des maquettes en expériences rapides, soignées et accessibles.</p>
@@ -105,7 +95,6 @@
 
     </section>
 
-    <!-- ====== Compétences ====== -->
     <section id="skills" class="competence reveal">
       <h2>Compétences</h2>
       <p class="muted">Langages, frameworks et outils que j’utilise au quotidien — avec une spécialisation en <strong>React</strong>, <strong>Symfony</strong> et <strong>Python</strong>.</p>
@@ -120,7 +109,7 @@
       </div>
 
       <div class="skills-grid" id="skillsGrid">
-        <!-- Les cartes sont chargées dynamiquement via JS -->
+
       </div>
 
       <div class="skills-pagination" id="skillsPagination"></div>
@@ -129,7 +118,6 @@
 
 
 
-    <!-- ====== Expériences ====== -->
     <section id="experience" class="experience reveal">
       <h2>Expériences</h2>
       <ol class="timeline" aria-label="Parcours professionnel">
@@ -152,65 +140,20 @@
       </ol>
     </section>
 
-    <!-- ====== Projets ====== -->
-    <section id="projects" class="projects reveal">
-      <h2>Projets</h2>
-      <div class="project-filters">
-        <button class="btn btn-ghost filter-btn is-active" data-filter="all">Tous</button>
-        <button class="btn btn-ghost filter-btn" data-filter="front">Front</button>
-        <button class="btn btn-ghost filter-btn" data-filter="fullstack">Full-stack</button>
-      </div>
+<section id="projects" class="projects reveal">
+  <h2>Mes projets</h2>
 
-      <div class="projects-grid">
-        <!-- Carte projet 1 -->
-        <article class="project-card" data-tags="front" tabindex="0">
-          <div class="project-media">
-            <!-- GARDE TON SRC ICI -->
-            <img src="<!-- SRC IMAGE PROJET 1 -->" alt="Aperçu projet 1" loading="lazy" />
-          </div>
-          <div class="project-body">
-            <h3>Projet 1</h3>
-            <p>SPA performante avec routing dynamique et API.</p>
-            <div class="project-actions">
-              <a class="btn" href="<!-- HREF LIVE DEMO PROJET 1 (GARDE TON LIEN) -->" target="_blank" rel="noopener">Live</a>
-              <a class="btn btn-ghost" href="<!-- HREF GITHUB PROJET 1 (GARDE TON LIEN) -->" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </article>
+  <div class="project-filters">
+    <button class="btn btn-ghost filter-btn is-active" data-filter="all">Tous</button>
+    <button class="btn btn-ghost filter-btn" data-filter="front">Front</button>
+    <button class="btn btn-ghost filter-btn" data-filter="fullstack">Full-stack</button>
+  </div>
 
-        <!-- Carte projet 2 -->
-        <article class="project-card" data-tags="fullstack" tabindex="0">
-          <div class="project-media">
-            <img src="<!-- SRC IMAGE PROJET 2 -->" alt="Aperçu projet 2" loading="lazy" />
-          </div>
-          <div class="project-body">
-            <h3>Projet 2</h3>
-            <p>App full-stack avec authentification et base de données.</p>
-            <div class="project-actions">
-              <a class="btn" href="<!-- HREF LIVE DEMO PROJET 2 -->" target="_blank" rel="noopener">Live</a>
-              <a class="btn btn-ghost" href="<!-- HREF GITHUB PROJET 2 -->" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </article>
+  <div id="projectsGrid" class="projects-grid"></div>
 
-        <!-- Carte projet 3 -->
-        <article class="project-card" data-tags="front" tabindex="0">
-          <div class="project-media">
-            <img src="<!-- SRC IMAGE PROJET 3 -->" alt="Aperçu projet 3" loading="lazy" />
-          </div>
-          <div class="project-body">
-            <h3>Projet 3</h3>
-            <p>UI expérimentale avec micro-interactions et animations fluides.</p>
-            <div class="project-actions">
-              <a class="btn" href="<!-- HREF LIVE DEMO PROJET 3 -->" target="_blank" rel="noopener">Live</a>
-              <a class="btn btn-ghost" href="<!-- HREF GITHUB PROJET 3 -->" target="_blank" rel="noopener">Code</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
+  <div id="projectsPagination" class="skills-pagination"></div>
+</section>
 
-    <!-- ====== Contact ====== -->
     <section id="contact" class="contact reveal" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
       <form class="contact-form" novalidate>
@@ -237,7 +180,6 @@
     </section>
   </main>
 
-  <!-- ====== Footer ====== -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-brand">
