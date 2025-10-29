@@ -591,7 +591,6 @@ textarea:focus {
   color: var(--muted);
 }
 
-/* ===== Footer ===== */
 .site-footer {
   margin-top: 2rem;
   padding: 2rem 1rem;
@@ -704,9 +703,9 @@ textarea:focus {
   }
 }
 
-/* ===== Responsive (>= 992px) ===== */
+
 @media (min-width: 992px) {
-  /* ----- Section Contact ----- */
+
   .contact {
     max-width: 1000px;
     margin: 0 auto;
