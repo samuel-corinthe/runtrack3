@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job 04 — Formulaire stylisé avec Tailwind</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+    <header
+      class="bg-gradient-to-r from-red-600 to-blue-700 text-white shadow-lg"
+    >
+      <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold tracking-wide">Mon Site</h1>
+        <ul class="flex space-x-8 text-lg">
+          <li>
+            <a href="index.html" class="hover:text-yellow-300 transition-colors"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a href="index.html" class="hover:text-yellow-300 transition-colors"
+              >Inscription</a
+            >
+          </li>
+          <li>
+            <a href="index.html" class="hover:text-yellow-300 transition-colors"
+              >Connexion</a
+            >
+          </li>
+          <li>
+            <a href="index.html" class="hover:text-yellow-300 transition-colors"
+              >Rechercher</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-grow flex justify-center items-center p-6">
+      <section
+        class="bg-white shadow-2xl rounded-2xl p-10 w-full max-w-xl border border-gray-200"
+      >
+        <h2 class="text-3xl font-semibold mb-8 text-center text-blue-700">
+          Création de compte
+        </h2>
+
+        <form class="space-y-6">
+          <div>
+            <p class="font-medium mb-3 text-gray-700">Civilité :</p>
+            <label class="mr-6 text-gray-600">
+              <input
+                type="radio"
+                name="civilite"
+                value="monsieur"
+                class="mr-2 accent-blue-600"
+              />
+              Monsieur
+            </label>
+            <label class="text-gray-600">
+              <input
+                type="radio"
+                name="civilite"
+                value="madame"
+                class="mr-2 accent-pink-600"
+              />
+              Madame
+            </label>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div
+              class="flex items-center border border-gray-300 rounded-lg p-2 shadow-sm bg-gray-50 focus-within:ring-2 focus-within:ring-blue-400 transition"
+            >
+              <i data-lucide="user" class="w-5 h-5 text-gray-500 mr-2"></i>
+              <input
+                type="text"
+                placeholder="Prénom"
+                class="bg-transparent outline-none w-full"
+                required
+              />
+            </div>
+            <div
+              class="flex items-center border border-gray-300 rounded-lg p-2 shadow-sm bg-gray-50 focus-within:ring-2 focus-within:ring-blue-400 transition"
+            >
+              <i data-lucide="user" class="w-5 h-5 text-gray-500 mr-2"></i>
+              <input
+                type="text"
+                placeholder="Nom"
+                class="bg-transparent outline-none w-full"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Adresse -->
+          <div
+            class="flex items-center border border-gray-300 rounded-lg p-2 shadow-sm bg-gray-50 focus-within:ring-2 focus-within:ring-blue-400 transition"
+          >
+            <i data-lucide="home" class="w-5 h-5 text-gray-500 mr-2"></i>
+            <input
+              type="text"
+              placeholder="Adresse"
+              class="bg-transparent outline-none w-full"
+              required
+            />
+          </div>
+
+          <div
+            class="flex items-center border border-gray-300 rounded-lg p-2 shadow-sm bg-gray-50 focus-within:ring-2 focus-within:ring-blue-400 transition"
+          >
+            <i data-lucide="mail" class="w-5 h-5 text-gray-500 mr-2"></i>
+            <input
+              type="email"
+              placeholder="Adresse email"
+              class="bg-transparent outline-none w-full"
+              required
+            />
+          </div>
+
+          <div
+            class="flex items-center border border-gray-300 rounded-lg p-2 shadow-sm bg-gray-50 focus-within:ring-2 focus-within:ring-blue-400 transition"
+          >
+            <i data-lucide="lock" class="w-5 h-5 text-gray-500 mr-2"></i>
+            <input
+              type="password"
+              placeholder="Mot de passe"
+              class="bg-transparent outline-none w-full"
+              required
+            />
+          </div>
+          <div
+            class="flex items-center border border-gray-300 rounded-lg p-2 shadow-sm bg-gray-50 focus-within:ring-2 focus-within:ring-blue-400 transition"
+          >
+            <i data-lucide="lock" class="w-5 h-5 text-gray-500 mr-2"></i>
+            <input
+              type="password"
+              placeholder="Confirmez le mot de passe"
+              class="bg-transparent outline-none w-full"
+              required
+            />
+          </div>
+
+          <div>
+            <p class="font-medium mb-3 text-gray-700">Vos passions :</p>
+            <div class="flex flex-wrap gap-4">
+              <label class="flex items-center text-gray-600">
+                <input type="checkbox" class="mr-2 accent-blue-600" />
+                Informatique
+              </label>
+              <label class="flex items-center text-gray-600">
+                <input type="checkbox" class="mr-2 accent-green-600" /> Voyages
+              </label>
+              <label class="flex items-center text-gray-600">
+                <input type="checkbox" class="mr-2 accent-yellow-500" /> Sport
+              </label>
+              <label class="flex items-center text-gray-600">
+                <input type="checkbox" class="mr-2 accent-purple-600" /> Lecture
+              </label>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-semibold px-6 py-3 rounded-lg w-full shadow-md hover:opacity-90 transition-all duration-200"
+          >
+            Créer mon compte
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer
+      class="bg-gradient-to-r from-indigo-700 to-red-600 text-white py-6 mt-6 shadow-inner"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-6"
+      >
+        <p class="text-sm mb-3 md:mb-0">
+          © 2025 Mon Site — Tous droits réservés
+        </p>
+        <ul class="flex space-x-6 text-lg">
+          <li>
+            <a href="index.html" class="hover:text-yellow-300 transition-colors"
+              >Accueil</a
+            >
+          </li>
+          <li>
+            <a href="index.html" class="hover:text-yellow-300 transition-colors"
+              >Inscription</a
+            >
+          </li>
+          <li>
+            <a href="index.html" class="hover:text-yellow-300 transition-colors"
+              >Connexion</a
+            >
+          </li>
+          <li>
+            <a href="index.html" class="hover:text-yellow-300 transition-colors"
+              >Rechercher</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

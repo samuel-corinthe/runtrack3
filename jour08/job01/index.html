@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job 01 — Formulaire d'inscription</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+    <header class="bg-blue-600 text-white p-4">
+      <nav class="flex justify-between items-center max-w-4xl mx-auto">
+        <h1 class="text-2xl font-bold">Mon Site</h1>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:underline">Accueil</a></li>
+          <li><a href="index.html" class="hover:underline">Inscription</a></li>
+          <li><a href="index.html" class="hover:underline">Connexion</a></li>
+          <li><a href="index.html" class="hover:underline">Rechercher</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-grow flex justify-center items-center p-6">
+      <section class="bg-white shadow-md rounded-xl p-8 w-full max-w-lg">
+        <h2 class="text-2xl font-semibold mb-6 text-center">
+          Création de compte
+        </h2>
+
+        <form class="space-y-4">
+          <div>
+            <p class="font-medium mb-2">Civilité :</p>
+            <label class="mr-4">
+              <input
+                type="radio"
+                name="civilite"
+                value="monsieur"
+                class="mr-1"
+              />
+              Monsieur
+            </label>
+            <label>
+              <input type="radio" name="civilite" value="madame" class="mr-1" />
+              Madame
+            </label>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input
+              type="text"
+              placeholder="Prénom"
+              class="border rounded-lg p-2 w-full"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Nom"
+              class="border rounded-lg p-2 w-full"
+              required
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Adresse"
+            class="border rounded-lg p-2 w-full"
+            required
+          />
+
+          <input
+            type="email"
+            placeholder="Adresse email"
+            class="border rounded-lg p-2 w-full"
+            required
+          />
+
+          <input
+            type="password"
+            placeholder="Mot de passe"
+            class="border rounded-lg p-2 w-full"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Confirmez le mot de passe"
+            class="border rounded-lg p-2 w-full"
+            required
+          />
+
+          <div>
+            <p class="font-medium mb-2">Vos passions :</p>
+            <label class="block"
+              ><input type="checkbox" class="mr-2" /> Informatique</label
+            >
+            <label class="block"
+              ><input type="checkbox" class="mr-2" /> Voyages</label
+            >
+            <label class="block"
+              ><input type="checkbox" class="mr-2" /> Sport</label
+            >
+            <label class="block"
+              ><input type="checkbox" class="mr-2" /> Lecture</label
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg w-full hover:bg-blue-700 transition"
+          >
+            Valider
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 mt-6">
+      <ul class="flex justify-center space-x-6">
+        <li><a href="index.html" class="hover:underline">Accueil</a></li>
+        <li><a href="index.html" class="hover:underline">Inscription</a></li>
+        <li><a href="index.html" class="hover:underline">Connexion</a></li>
+        <li><a href="index.html" class="hover:underline">Rechercher</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
